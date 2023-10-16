@@ -1,26 +1,25 @@
-import React from "react";
+import React from 'react'
+import rigoImage from '../../img/rigo-baby.jpg'
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
+import { Navbar } from './Navbar'
+import { Container } from './Container'
+import { Jumbotron } from './Jumbotron'
+import { CardContainer } from './CardContainer'
+import { Card } from './Card'
+import { NavItem } from './NavItem'
 //create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
-};
+  return (
+    <>
+      <Navbar logo='Start Bootstrap'>
+        <NavItem />
+      </Navbar>
+      <Container>
+        <Jumbotron />
+        <CardContainer />
+      </Container>
+    </>
+  )
+}
 
-export default Home;
+export default Home
